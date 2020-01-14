@@ -1,3 +1,3 @@
 # React la guia completa 
-## Juan de la Torre e 
+## Juan de la Torre  
 # UDEMY

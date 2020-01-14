@@ -1,6 +1,6 @@
 import React from 'react'
 
-//funcion estandar en React
+//funcion estandar en React -Function Declaration
 function Header (){
 
     //Antes del return puedes escribir variables para utilizar dentro del return
