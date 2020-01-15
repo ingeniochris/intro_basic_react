@@ -1,15 +1,17 @@
 import React from 'react'
 import Product from './Product'
 
-const Car = ({car}) => (
+const Car = ({car, addProduct}) => (
        <div className="row">
            <div className="col">
-            {car.length === 0       {//agregamos un compracion ternaria es recomendable}
+            {car.length === 0      
             ? <p>No hay elementos</p>
             :car.map(product => (
                 <Product
                     key={product.id}
                     product={product}
+                    car={car}
+                    addProduct={addProduct}
                 /> 
             ))}
            </div>
@@ -17,4 +19,4 @@ const Car = ({car}) => (
     )
 
 
-export default Car
+export default Car;

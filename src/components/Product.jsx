@@ -13,6 +13,14 @@ const Product = ({ product, products, car, addProduct }) => {
         ]);
   };
 
+  const deleteProduct = id => {
+        const products = car.filter(product => product.id !== id);
+
+        //agregar productos en state
+        addProduct(products);
+
+  }
+
 
 
   return (
@@ -22,10 +30,18 @@ const Product = ({ product, products, car, addProduct }) => {
               <div className="card">
       <h2>{name}</h2>
       <p>$ {price}</p>
-      <button
-      className="btn btn-success"
-      onClick={()=> selectProduct(id)}
-      >Buy</button>
+        {products
+        ?(   <button
+            className="btn btn-success"
+            onClick={()=> selectProduct(id)}
+            >Buy</button>
+            )
+        :(<button
+            className="btn btn-success"
+            onClick={()=> deleteProduct(id)}
+            >Delete</button>)
+        
+        }
     </div>
               </div>
           </div>

@@ -50,6 +50,7 @@ function App() {
              <div className="card-body">
                 <Car
                 car={car}
+                addProduct={addProduct}
                 />
              </div>
            </div>
