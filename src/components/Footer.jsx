@@ -1,9 +1,10 @@
 import React from 'react'
 
 //Otra forma de crear elementos es con "Function Expression" puedes eliminar las {} y el return para simplificar codigo el return queda implicito "'solo en function expression'" 
-const Footer = () => (
+
+const Footer = ({date}) => ( // Aplicamos Destructuring para obtener el props.fecha
         <footer>
-            <p>Todos los derechos reservados &copy;</p>
+            <p>Todos los derechos reservados &copy; {date}</p>
         </footer>
     );
 
