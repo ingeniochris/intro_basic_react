@@ -16,7 +16,7 @@ function Header({ title }) {
   return (
     <Fragment>
       <h1>{title}</h1>
-      <p>{message}</p>
+      {/* <p>{message}</p> */}
     </Fragment>
   );
 }

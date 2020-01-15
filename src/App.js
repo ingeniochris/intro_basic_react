@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react"; // Con Fragment puedes encerrar los componentes !!! Agregamos useState y usas Hooks!!!!!!
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
@@ -7,10 +8,10 @@ import Product from "./components/Product";
 function App() {
   //crear listado de productos usando Hooks__ Aplicamos Destructuring para crear los funciones a usas ejemplo products "state original" y getProducts "agrega o elimina---state modificado"
   const [products, getProducts] = useState([
-    { id: 1, name: "JavaScrip", price: 50 },
+    { id: 1, name: "JavaScrip", price: 80 },
     { id: 2, name: "Angular", price: 50 },
-    { id: 3, name: "Vue", price: 50 },
-    { id: 4, name: "Svelte", price: 50 }
+    { id: 3, name: "Vue", price: 25 },
+    { id: 4, name: "Svelte", price: 55 }
   ]);
 
   //Obtener fecha y la mandamos como props a footer
@@ -18,17 +19,23 @@ function App() {
 
   return (
     <Fragment>
-      <Header title="Introduccion a React" />
-      <h1>Lista de productos</h1>
-      {products.map(product => (
-          <Product 
-            key={product.id}
-            product={product} 
-          />
-      ))}
-      <Footer 
-        date={date} 
-      />
+      <div className="container mt-5">
+        <div className="card">
+          <div className="card-header">
+            <div className="card-title">
+              <Header title="Introduccion a React" />
+            </div>
+          </div>
+          <div className="card-body">
+            {products.map(product => (
+              <Product key={product.id} product={product} />
+            ))}
+          </div>
+          <div className="card-footer text-muted">
+            <Footer date={date} />
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 }
