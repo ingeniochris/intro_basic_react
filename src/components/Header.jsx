@@ -5,13 +5,13 @@ function Header({ title }) {
   //extraemos con Destructuring el props.title
 
   //Antes del return puedes escribir variables para utilizar dentro del return
-  const age = 15;
+/*   const age = 15;
   let message = "";
   if (age >= 18) {
     message = "Eres mayor de edad";
   } else {
     message = "Eres menor de edad";
-  }
+  } */
 
   return (
     <Fragment>

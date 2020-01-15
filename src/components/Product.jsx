@@ -18,7 +18,7 @@ const Product = ({ product, products, car, addProduct }) => {
   return (
       <div className="container text-center">
           <div className="row m-3">
-              <div className="col-md-3">
+              <div className="col">
               <div className="card">
       <h2>{name}</h2>
       <p>$ {price}</p>
