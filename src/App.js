@@ -14,6 +14,9 @@ function App() {
     { id: 4, name: "Svelte", price: 55 }
   ]);
 
+  //Segundo State para un carrito de compras
+  const [car,addProduct]= useState([])
+
   //Obtener fecha y la mandamos como props a footer
   const date = new Date().getFullYear();
 
@@ -28,7 +31,7 @@ function App() {
           </div>
           <div className="card-body">
             {products.map(product => (
-              <Product key={product.id} product={product} />
+              <Product key={product.id} product={product} car={car} products={products} addProduct={addProduct} />
             ))}
           </div>
           <div className="card-footer text-muted">

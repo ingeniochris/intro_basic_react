@@ -1,15 +1,16 @@
 import React from "react";
 
-const Product = ({ product }) => {
+const Product = ({ product, products, car, addProduct }) => {
   //podemos aplicar destructuring a el props product para no escribir product.name
   const { id, name, price } = product;
 
   //Agregar product in card
   const selectProduct = (id) =>{
-    console.log('Buy' , id)
-  }
+        const product = products.filter(product => product.id === id)[0];
+        console.log(product);
+  };
 
-  ;
+
 
   return (
       <div className="container text-center">
